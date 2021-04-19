@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block title %}Product Detail{% endblock title %}
+
+{% block head %}
+<style>
+</style>
+{% endblock head %}
+
+
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+
+      <h1>Lorem, ipsum dolor.</h1>
+      <div class="list-group">
+        {% for product in products %}
+        <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{ product.name }}</h5>
+            <small>3 days ago</small>
+          </div>
+          <p class="mb-1">{{ product.description }}</p>
+          <small>And some small print.</small>
+        </a>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock body %}
+
+
+{% block footer %}
+<script>
+</script>
+{% endblock footer %}

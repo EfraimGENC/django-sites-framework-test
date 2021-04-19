@@ -2,12 +2,14 @@ from django.db import models
 from django.contrib.sites.models import Site
 from django.contrib.sites.managers import CurrentSiteManager
 from django.shortcuts import redirect, reverse
+from sitesf.apps.channel.models import Channel
 
 # Create your models here.
 class Product(models.Model):
 
     name = models.CharField(max_length=150)
     description = models.TextField("Description")
+    channels = models.ManyToManyField(Channel)
     sites = models.ManyToManyField(Site)
     objects = models.Manager()
     on_site = CurrentSiteManager()
