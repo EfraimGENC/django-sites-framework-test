@@ -12,27 +12,24 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+# Environ
+# https://django-environ.readthedocs.io/en/latest/
+
+env = environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-himqha+)a1@83m=u%+))&#gbc!*(o6ri)kkt@tqhwvltgt2@j0'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = [
-    '127.0.0.1',
-    '139.59.132.237',
-    'sitesf1.kavimdigital.com',
-    'sitesf2.kavimdigital.com',
-    'sitesf3.kavimdigital.com'
-]
+SECRET_KEY = env('SECRET_KEY')
 
 
 # Application definition
@@ -149,8 +146,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'account.User'
 AUTH_PROFILE_MODULE = 'account.User'
 
-# Sites Framework
-# SITE_ID = 1
 
 # Secure
 # SECURE_HSTS_SECONDS = 60 * 60 * 24  # Unit is seconds; *USE A SMALL VALUE FOR TESTING!*
