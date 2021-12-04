@@ -10,9 +10,8 @@ class Product(models.Model):
     name = models.CharField(max_length=150)
     description = models.TextField("Description")
     channels = models.ManyToManyField(Channel)
-    sites = models.ManyToManyField(Site)
+
     objects = models.Manager()
-    on_site = CurrentSiteManager()
 
     class Meta:
         verbose_name = "Product"
