@@ -150,4 +150,3 @@ AUTH_USER_MODEL = 'account.User'
 AUTH_PROFILE_MODULE = 'account.User'
 
 # Sites Framework
-SITE_ID = 1
