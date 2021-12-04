@@ -19,5 +19,5 @@ from sitesf.apps.catalog import views as catalog_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('product/', catalog_views.product_detail, name='product_detail')
+    path('product/', catalog_views.product_list, name='product_list')
 ]

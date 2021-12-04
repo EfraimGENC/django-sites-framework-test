@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.sites.models import Site
+from django.shortcuts import redirect, reverse
 
 # Create your models here.
 class Channel(models.Model):
