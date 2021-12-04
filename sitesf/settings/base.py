@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django.contrib.humanize',
     'sitesf.apps.account',
     'sitesf.apps.catalog',
     'sitesf.apps.channel',

@@ -10,6 +10,7 @@ class Product(models.Model):
     name = models.CharField(max_length=150)
     description = models.TextField("Description")
     channels = models.ManyToManyField(Channel)
+    created_date = models.DateTimeField(auto_now_add=True)
 
     objects = models.Manager()
 

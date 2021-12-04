@@ -1,4 +1,5 @@
 {% extends 'layout.html' %}
+{% load humanize %}
 
 {% block title %}Product Detail{% endblock title %}
 
@@ -19,7 +20,7 @@
         <a href="" class="list-group-item list-group-item-action" aria-current="true">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{ product.name }}</h5>
-            <small>3 days ago</small>
+            <small>{{ product.created_date|naturaltime }}</small>
           </div>
           <p class="mb-1">{{ product.description }}</p>
           <small>And some small print.</small>
