@@ -4,9 +4,12 @@ from django.http import HttpResponse
 from .models import Product
 from django.contrib.sites.models import Site
 from sitesf.apps.channel.models import Channel
-
+from django.views.generic import ListView
 
 # Create your views here.
-def product_list(request):
-    products = Product.objects.filter(channels__site=request.site).distinct()
-    return render(request, 'product_detail.html', {'products': products})
+class ProductList(ListView):
+    model = Product
+    template_name='product_detail.html'
+
+    def get_queryset(self):
+        return self.model.objects.filter(channels__site=self.request.site).distinct()
