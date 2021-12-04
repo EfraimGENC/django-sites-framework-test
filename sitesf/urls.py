@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from sitesf.apps.catalog import views as catalog_views
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('product/', catalog_views.product_list, name='product_list')
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
