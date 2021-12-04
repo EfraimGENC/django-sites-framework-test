@@ -13,10 +13,10 @@
   <div class="row">
     <div class="col-12">
 
-      <h1>Lorem, ipsum dolor.</h1>
+      <h1>{{ request.site.domain }}</h1>
       <div class="list-group">
         {% for product in products %}
-        <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+        <a href="" class="list-group-item list-group-item-action" aria-current="true">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{ product.name }}</h5>
             <small>3 days ago</small>

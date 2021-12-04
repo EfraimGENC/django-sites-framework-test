@@ -8,5 +8,5 @@ from sitesf.apps.channel.models import Channel
 
 # Create your views here.
 def product_list(request):
-    products = Product.objects.filter(channels__site=request.site)
+    products = Product.objects.filter(channels__site=request.site).distinct()
     return render(request, 'product_detail.html', {'products': products})

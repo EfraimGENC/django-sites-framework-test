@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-himqha+)a1@83m=u%+))&#gbc!*(o6ri)kkt@tqhwvltgt2@j0
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     '139.59.132.237',
     'sitesf1.kavimdigital.com',
     'sitesf2.kavimdigital.com',
