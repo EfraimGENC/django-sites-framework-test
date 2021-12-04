@@ -26,7 +26,12 @@ SECRET_KEY = 'django-insecure-himqha+)a1@83m=u%+))&#gbc!*(o6ri)kkt@tqhwvltgt2@j0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '139.59.132.237',
+    'sitesf1.kavimdigital.com',
+    'sitesf2.kavimdigital.com',
+    'sitesf3.kavimdigital.com'
+]
 
 
 # Application definition
